@@ -1,5 +1,5 @@
-site_name: Kitchen cookbook
-repo_url: https://gitlab.openstorage.io/infrastructure/devops-documentation
+site_name: Kitchen cookbook for the home
+repo_url: https://gitlab.openstorage.io/apinter/cookbok
 edit_uri: ""
 
 plugins:
@@ -39,8 +39,8 @@ extra:
     logo: image/geeko-color.png
     social:
     - icon: fontawesome/brands/gitlab
-      link: https://gitlab.antavo.com/infrastructure/devops-documentation
-      name: Antavo Internal Gitlab
+      link: https://gitlab.openstorage.io/apinter/cookbok
+      name: Cookbook on Gitlab
 
 extra_css: 
     - styles.css
@@ -58,9 +58,12 @@ nav:
     - Home: index.md
       #- Version Selector: "../"
     - Favorites: ""
-    - Desserts: ""
+    - Desserts: 
+        - Pancakes: ""
+        - American Pancakes: ""
+        - Apple pie: ""
     - Mains: 
-        - Tofu: ""
+        - Vegan: ""
         - Beef: ""
         - Chicken: ""
         - Fish: ""
