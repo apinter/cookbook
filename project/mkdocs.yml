@@ -59,13 +59,26 @@ nav:
       #- Version Selector: "../"
     - Favorites: ""
     - Desserts: 
-        - Pancakes: ""
+        - Crepes: "crepes.md"
         - American Pancakes: ""
         - Apple pie: ""
     - Mains: 
         - Vegan: ""
-        - Beef: ""
-        - Chicken: ""
-        - Fish: ""
-        - Asian: ""
-        - Western: ""
+        - Asian:
+            - Gorengan (tempe): ""
+            - Gorengan (bakwan jagung): ""
+            - Bakso: ""
+            - Shanghai style eggplants: ""
+            - Broccoli stir fries: ""
+        - Pasta:
+            - Spaghetti:  ""
+            - Black pepper fetuccini: ""
+            - Alfredo: ""
+        - Beef:
+            - Burger: ""
+            - Steak: ""
+        - Chicken: 
+            - Chicken fingers sandwich: ""
+        - Fish:
+            - Tuna melt sandwich: ""
+            - Tuna fish cakes: ""
