@@ -1,0 +1,33 @@
+workflow:
+  rules:
+    - if: $CI_COMMIT_BRANCH == 'master'
+
+image: registry.antavo.com/devops/ansible:latest
+
+stages:         
+  - build
+  - deploy
+
+build-job: 
+  stage: build
+  before_script:
+    - zypper ref
+    - zypper in -y python38 python38-pip git
+    - pip install -r requirements.txt
+  script:
+    - cd ${CI_PROJECT_DIR}/project
+    - mkdocs build
+
+deploy-job:      
+  variables:
+    GIT_STRATEGY: fetch
+    GIT_CHECKOUT: "false"
+  stage: deploy  
+  before_script:
+    - export STORAGE_DRIVER=vfs
+    - export BUILDAH_FORMAT=docker
+    - buildah info
+  script:
+    - buildah login --username robot\$gitlab-devops --password $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - buildah build -t $CI_REGISTRY/devops/$OCI_NAME .
+    - buildah push $CI_REGISTRY/devops/$OCI_NAME

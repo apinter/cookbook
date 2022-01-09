@@ -1,0 +1,18 @@
+---
+ - name: Deploy and configure mongodb replica set 
+   become: true
+   gather_facts: true
+   hosts: all
+   tasks:
+    - name: Copy build
+      ansible.builtin.copy:
+        src: "{{ project }}/project/site"
+        dest: /var/lib/containers/storage/volumes/nginx-conf/_data/
+        owner: root
+        group: root
+        mode: 0666
+        backup: yes
+    - name: Restart pod
+      ansible.builtin.systemd:
+        name: container-internal-routing.service 
+        state: restarted
