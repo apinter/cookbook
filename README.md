@@ -1,9 +1,5 @@
-DevOps Documentation
+Cookbook Documentation
 ====================
-
-Docs related to the on-prem, cloud infra and their software components.
-## Get in touch?
-With issues, questions you can e-mail us at infrastructure@antavo.com or at the #DevOps on Slack.
 
 ## Reviewing process
 ```
@@ -40,39 +36,6 @@ We're using pipenv, which you install on most Linux distributions with: `pip3 in
 * for `fish` run the following command once from a fish shell: `set -Ua fish_user_paths /home/your-user-name/.local/bin`; start a fresh shell with `exec fish`
 * for `zsh` add `export PATH=$PATH/home/your-user-name/.local/bin` to `~/.zshrc`; reload to apply changes with `source ~/.zshrc`
 
-## Poetry installation (requires python3.5+) [OPTIONAL]
-
-Install via poetry installer : `curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -`
-
-After installation command complete you will find your poetry install under `$HOME/.poetry/bin`
-This directory will be automatically added to your $PATH environment variable, by appending a statement to your $HOME/.profile configuration (or equivalent files). If you do not feel comfortable with this, please pass the --no-modify-path flag to the installer and manually add the Poetry's bin directory to your path.
-
-Another way to install poetry is using the distribution provided packages that you can install with your distro's package manager. (apt, zypper, pacman, dnf etc.)
-
-### Enable tab completion for `poetry`
-```
-# Bash
-poetry completions bash > /etc/bash_completion.d/poetry.bash-completion
-
-# Bash (Homebrew)
-poetry completions bash > $(brew --prefix)/etc/bash_completion.d/poetry.bash-completion
-
-# Fish
-poetry completions fish > ~/.config/fish/completions/poetry.fish
-
-# Fish (Homebrew)
-poetry completions fish > (brew --prefix)/share/fish/vendor_completions.d/poetry.fish
-
-# Zsh
-poetry completions zsh > ~/.zfunc/_poetry
-
-# Oh-My-Zsh
-mkdir $ZSH_CUSTOM/plugins/poetry
-poetry completions zsh > $ZSH_CUSTOM/plugins/poetry/_poetry
-
-# prezto
-poetry completions zsh > ~/.zprezto/modules/completion/external/src/_poetry
-```
 
 ### Clone, edit, test
 1. clone this repo where you want in your home folder
@@ -102,12 +65,8 @@ __Checklist__:
 
 ## Formal constraints
 ### Branches
-* The default branch -- the working branch -- is `master`. We will merge from one milestone to the other.
+* The default branch -- the working branch -- is `main`. We will merge from one milestone to the other.
 * 4 types of branch names, named after the type of commits you want to contribute to. MRs should whenever possible concern just one type of commit.
-  * `structure` (how the textual and multimedia contents breaks down into different parts)
-  * `design` (web and non-web visuals)
-  * `web-functions` (functionalities invoked from the web release of the docs)
-  * `contents` (textual and multimedia contents)
 
 ### Style
 _Structure_. Each document should start with an intro stating the end goal, the important presuppositions (typically about pre-requirements) that the document is making, and an outline of the main steps on the path to the goal.
