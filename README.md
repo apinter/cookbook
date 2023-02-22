@@ -39,7 +39,7 @@ We're using pipenv, which you install on most Linux distributions with: `pip3 in
 
 ### Clone, edit, test
 1. clone this repo where you want in your home folder
-2. `cd` to it and run `pipenv install` or `poetry install` to install the dependencies, and then `pipenv shell` or `poetry shell` to run the environment. 
+2. `cd` to it and run `pipenv install` to install the dependencies, and then `pipenv shell` to run the environment. 
 3. finally `cd` to `project` and run you `mkdocs` commands from there.
 
 The only important command is `mkdocs serve`; it generates the website from the source files and service it on http://127.0.0.1:8000/. 
@@ -49,7 +49,7 @@ Use it now to make sure you can build and display the website.
 Now you are read to work on the docs. You can either shut down the server with `CTRL + c` or let it run. It will auto-reload and refresh your browser whenever you save your changes.
 
 ### Get ready to open a Merge Request
-If you are new to `git` read the [Gitlab MR docs](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html). 
+If you are new to `git` read the [Github PR docs](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request). 
 
 If you're new to Markdown read the [Mkdocs Markdown guide](https://www.markdownguide.org/tools/mkdocs/)
 
